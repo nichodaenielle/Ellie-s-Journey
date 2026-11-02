@@ -127,7 +127,7 @@ video.layer.on{opacity:1}
 /* toast + pause */
 #toast{position:fixed;top:3vh;right:3vw;z-index:30;background:rgba(20,12,5,.72);border:1px solid rgba(242,176,30,.35);backdrop-filter:blur(8px);color:#FFF1C4;padding:.6em 1.1em;border-radius:12px;font-size:15px;letter-spacing:.05em;opacity:0;transition:opacity .4s ease;pointer-events:none}
 #toast.show{opacity:1}
-#paused{position:fixed;inset:0;z-index:25;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.35);backdrop-filter:blur(4px)}
+#paused{position:fixed;inset:0;z-index:25;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.35);backdrop-filter:blur(4px);pointer-events:none}
 #paused.show{display:flex}
 #paused div{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(40px,6vw,100px);color:#FFF1C4;text-shadow:0 4px 20px rgba(0,0,0,.6)}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.3s!important}#grain{display:none}}
