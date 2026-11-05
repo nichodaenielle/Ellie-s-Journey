@@ -1,3 +1,6 @@
 # source staging folders — already copied into film/
 additional vids/
 Music/
+
+# local preview server
+.serve.ps1

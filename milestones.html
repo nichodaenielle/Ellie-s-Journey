@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ellie's First Year — Milestone Board</title>
+<meta name="description" content="Baby Ellie's milestone board — her first year, month by month.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='%23F2B01E'%3E%3Cellipse cx='32' cy='9' rx='6' ry='11'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(45 32 32)'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(90 32 32)'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(135 32 32)'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(180 32 32)'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(225 32 32)'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(270 32 32)'/%3E%3Cellipse cx='32' cy='9' rx='6' ry='11' transform='rotate(315 32 32)'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='12' fill='%234A2C17'/%3E%3C/svg%3E">
+<style>
+:root{--sun:#F2B01E;--sun2:#E08E0B;--cream:#FFF6D6;--ink:#4A2C17;--goldline:rgba(242,176,30,.28);
+ --sf:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3CradialGradient id='c' cx='50%25' cy='45%25' r='55%25'%3E%3Cstop offset='0' stop-color='%238a5a2b'/%3E%3Cstop offset='1' stop-color='%234A2C17'/%3E%3C/radialGradient%3E%3ClinearGradient id='p' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFD54A'/%3E%3Cstop offset='1' stop-color='%23E08E0B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='url(%23p)'%3E%3Cellipse cx='32' cy='10' rx='6' ry='11'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(30 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(60 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(90 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(120 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(150 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(180 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(210 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(240 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(270 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(300 32 32)'/%3E%3Cellipse cx='32' cy='10' rx='6' ry='11' transform='rotate(330 32 32)'/%3E%3C/g%3E%3Ccircle cx='32' cy='32' r='12' fill='url(%23c)'/%3E%3C/svg%3E")}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:Nunito,system-ui,sans-serif;color:var(--ink);display:flex;flex-direction:column;align-items:center;padding:4vh 3vw 0;
+ background:radial-gradient(ellipse at 50% 20%,#FFF6D6 0%,#FFE9A0 55%,#F2B01E 140%)}
+header{text-align:center;margin-bottom:3vh}
+header .flower{width:clamp(56px,6vw,96px);height:auto;filter:drop-shadow(0 8px 20px rgba(160,100,10,.35))}
+h1{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(40px,6vw,104px);line-height:1.05;color:var(--ink)}
+h1 .sun{color:#c77f0e}
+header .sub{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(15px,1.8vw,30px);letter-spacing:.08em;color:#7a5a3a;margin-top:.35em}
+header .dates{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:clamp(12px,1.3vw,22px);color:#9a7248;margin-top:.5em;letter-spacing:.05em}
+header .rule{width:16em;max-width:60vw;height:1px;margin:1em auto 0;background:linear-gradient(90deg,transparent,var(--sun),transparent)}
+
+/* the board */
+#board{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.2vw,30px);width:min(1200px,100%);margin:0 auto}
+.cell{position:relative}
+.cell figure{position:relative;background:#FFFDF4;border-radius:4px;padding:9% 9% 30%;height:100%;
+ box-shadow:0 14px 34px rgba(122,80,20,.25),0 3px 8px rgba(122,80,20,.18);
+ transform:rotate(var(--r,0deg));transition:transform .35s cubic-bezier(.2,.7,.3,1.3),box-shadow .35s ease}
+.cell figure:hover{transform:rotate(0deg) translateY(-6px) scale(1.03);box-shadow:0 26px 50px rgba(122,80,20,.35),0 4px 12px rgba(122,80,20,.22);z-index:2}
+.cell figure:after{content:"";position:absolute;top:-5%;left:50%;width:18%;aspect-ratio:1;margin-left:-9%;
+ background:var(--sf) center/contain no-repeat;transform:rotate(14deg);filter:drop-shadow(0 3px 6px rgba(0,0,0,.35));pointer-events:none}
+.cell img{display:block;width:100%;height:100%;object-fit:cover;border-radius:2px;aspect-ratio:3/4}
+.cell figcaption{position:absolute;left:0;right:0;bottom:0;height:26%;display:flex;align-items:center;justify-content:center;gap:.3em;
+ font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(19px,2.1vw,34px);color:var(--ink)}
+.cell figcaption:before{content:"";width:.55em;height:.55em;flex:none;background:var(--sf) center/contain no-repeat}
+.cell.m12 figure{background:#FFF3C0;box-shadow:0 14px 40px rgba(200,140,20,.45),0 3px 8px rgba(122,80,20,.2)}
+.cell.m12 figcaption{color:#c77f0e}
+.cell.m12:after{content:"";position:absolute;inset:-8px;border:2px dashed var(--goldline);border-radius:10px;pointer-events:none}
+
+/* accent cards */
+.accent{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.2vh;text-align:center;
+ background:rgba(255,253,242,.55);border:2px dashed var(--goldline);border-radius:10px;padding:8%;transform:rotate(var(--r,0deg))}
+.accent svg{width:clamp(38px,4.5vw,74px);height:auto;filter:drop-shadow(0 4px 10px rgba(160,100,10,.3))}
+.accent .t{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(20px,2.4vw,40px);line-height:1.15;color:#b0761a}
+.accent .s{font-family:Fraunces,Georgia,serif;font-style:italic;font-size:clamp(11px,1.1vw,17px);color:#9a7248;letter-spacing:.04em}
+
+footer{margin-top:auto;width:100%;position:relative;padding:3vh 0 0;text-align:center}
+footer .sig{font-family:"Dancing Script",cursive;font-weight:700;font-size:clamp(22px,2.6vw,44px);color:#7a5a3a}
+footer .garden{position:relative;height:11vh;min-height:70px;overflow:hidden;margin-top:1vh}
+footer .garden svg{position:absolute;bottom:-8%;transform-origin:50% 100%;animation:sway ease-in-out infinite alternate;filter:drop-shadow(0 6px 14px rgba(122,80,20,.3))}
+@keyframes sway{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+.tip{position:fixed;right:12px;bottom:12px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#7a5a3a;background:rgba(255,253,242,.85);
+ border:1px solid var(--goldline);border-radius:999px;padding:.5em 1.1em;opacity:.8}
+
+@media (max-width:900px){#board{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){#board{grid-template-columns:repeat(2,1fr);gap:14px}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media print{
+  body{background:#FFFDF4;padding:2mm}
+  .tip,footer .garden{display:none}
+  .cell figure:hover{transform:rotate(var(--r,0deg))}
+  #board{gap:10px}
+  @page{size:landscape;margin:8mm}
+}
+</style>
+</head>
+<body>
+<header>
+  <svg class="flower" viewBox="0 0 64 64"><use href="#sf"/></svg>
+  <h1>Ellie's First <span class="sun">Year</span></h1>
+  <div class="sub">Elliana Daenerys Daypuyart</div>
+  <div class="dates">November 5, 2025 &nbsp;·&nbsp; November 5, 2026</div>
+  <div class="rule"></div>
+</header>
+
+<div id="board"></div>
+
+<footer>
+  <div class="sig">With all our love, Mommy &amp; Daddy</div>
+  <div class="garden">
+    <svg viewBox="0 0 64 64" style="left:6%;height:74px;animation-duration:5.4s"><use href="#sf"/></svg>
+    <svg viewBox="0 0 64 64" style="left:15%;height:44px;animation-duration:4.2s;animation-delay:-1.3s"><use href="#sf"/></svg>
+    <svg viewBox="0 0 64 64" style="left:48%;height:56px;animation-duration:5.8s;animation-delay:-.9s"><use href="#sf"/></svg>
+    <svg viewBox="0 0 64 64" style="left:83%;height:62px;animation-duration:6.1s;animation-delay:-.7s"><use href="#sf"/></svg>
+    <svg viewBox="0 0 64 64" style="left:91%;height:40px;animation-duration:4.8s;animation-delay:-2.1s"><use href="#sf"/></svg>
+  </div>
+</footer>
+<div class="tip">Print or screenshot to share</div>
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <radialGradient id="sfc" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#8a5a2b"/><stop offset="1" stop-color="#4A2C17"/></radialGradient>
+    <linearGradient id="sfp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD54A"/><stop offset="1" stop-color="#E08E0B"/></linearGradient>
+    <g id="sf">
+      <g fill="url(#sfp)">
+        <ellipse cx="32" cy="10" rx="6" ry="11"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(30 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(60 32 32)"/>
+        <ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(90 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(120 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(150 32 32)"/>
+        <ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(180 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(210 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(240 32 32)"/>
+        <ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(270 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(300 32 32)"/><ellipse cx="32" cy="10" rx="6" ry="11" transform="rotate(330 32 32)"/>
+      </g>
+      <circle cx="32" cy="32" r="12" fill="url(#sfc)"/>
+    </g>
+  </defs>
+</svg>
+
+<script>
+(function(){
+"use strict";
+/* photo, label, css class — one tile per month, closest photo to each month-day */
+var M=[
+ ["P003","Newborn"],
+ ["P015","1 Month"],
+ ["P030","2 Months"],
+ ["P036","3 Months"],
+ ["P044","4 Months"],
+ ["P048","5 Months"],
+ ["P062","6 Months"],
+ ["P075","7 Months"],
+ ["P099","8 Months"],
+ ["P103","9 Months"],
+ ["P134","10 Months"],
+ ["P158","11 Months"],
+ ["P172","1 Year Old!","m12"]
+];
+var ACCENT=[
+ {svg:true,t:"",cls:""},
+ {t:"one whole year",s:"of sunshine"},
+ {t:"and this is",s:"just the beginning"}
+];
+var ROT=[-1.8,1.4,-.7,1.9,-1.2,.8];
+var board=document.getElementById("board"),html="";
+M.forEach(function(m,i){
+  var cls="cell"+(m[2]?" "+m[2]:"");
+  html+='<div class="'+cls+'" style="--r:'+ROT[i%ROT.length]+'deg"><figure><img src="film/photos/'+m[0]+'.jpg" alt="'+m[1]+'" loading="lazy"><figcaption>'+m[1]+'</figcaption></figure></div>';
+});
+ACCENT.forEach(function(a,i){
+  var r=ROT[(M.length+i)%ROT.length];
+  html+='<div class="cell"><div class="accent" style="--r:'+r+'deg">'+(a.svg?'<svg viewBox="0 0 64 64"><use href="#sf"/></svg>':'')+
+    '<div class="t">'+a.t+'</div><div class="s">'+a.s+'</div></div></div>';
+});
+board.innerHTML=html;
+})();
+</script>
+</body>
+</html>
